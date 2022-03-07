@@ -1,25 +1,42 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
-import { ReactComponent as Divider } from "./images/pattern-divider-desktop.svg";
-import { ReactComponent as Dice } from "./images/icon-dice.svg";
-function click(){
-  console.log(fetch("https://api.adviceslip.com/advice"));
-}
+import Divider from "./images/pattern-divider-desktop.svg";
+import  Dice from "./images/icon-dice.svg";
+import Avtar from "./Avtar";
 function App() {
+  const [posts, setPosts] = useState({id:"",text:""});
+ 
+  async function api() {
+    const url = "https://api.adviceslip.com/advice";
+    const response = await fetch(url);
+    const data = await response.json();
+    setPosts({
+      id: data.slip.id,
+      text: data.slip.advice,
+    });
+  }
+  useEffect(()=>{
+    api();
+  },[]);
   return (
     <main>
       <div className="Container">
-        <div className="Content flexCon">
-          <p>hii</p>
-          <h1>bye</h1>
-          <div className="dice flexCon">
-            <span className="divider">
-              <Divider />
-            </span>
-            <span className="button flexCon" onClick={click}>
-              <Dice />
-            </span>
-          </div>
+        <section>
+          <p>Advice #{posts.id}</p>
+          <p>"{posts.text}"</p>
+        </section>
+        <div className="bottom">
+          <Avtar
+            className="divider"
+            url={Divider}
+            alt="divider"
+          />
+          <Avtar
+            className="button"
+            url={Dice}
+            alt="dice"
+            click={api}
+          />
         </div>
       </div>
     </main>

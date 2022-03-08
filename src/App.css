@@ -51,10 +51,20 @@ section >p:nth-child(2){
   color: var(--Light_Cyan);
 }
 .button{
+  text-align: center;
   margin-top: 1.2rem;
   border-radius: 100%;
   padding: 0.7rem;
   background-color: var(--Neon_Green);
   position: absolute;
   top: 0.6rem;
+}
+.button:hover {
+  color: var(--Neon_Green);
+  box-shadow: 0 5px 15px rgba(76, 223, 95, 0.548);
+}
+@media screen and (max-width: 580px) {
+  .Container{
+    max-width: 85%;
+  }
 }

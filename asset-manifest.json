@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/frontendMentro-9/static/css/main.56350f48.css",
+    "main.css": "/frontendMentro-9/static/css/main.ead72ea4.css",
     "main.js": "/frontendMentro-9/static/js/main.2d35868a.js",
     "index.html": "/frontendMentro-9/index.html",
     "static/media/icon-dice.svg": "/frontendMentro-9/static/media/icon-dice.08691e4c24c11b5ba564e06b1f6bcbf3.svg",
     "static/media/pattern-divider-desktop.svg": "/frontendMentro-9/static/media/pattern-divider-desktop.ed9685263f6b47d21c8848f7d8bdd10e.svg",
-    "main.56350f48.css.map": "/frontendMentro-9/static/css/main.56350f48.css.map",
+    "main.ead72ea4.css.map": "/frontendMentro-9/static/css/main.ead72ea4.css.map",
     "main.2d35868a.js.map": "/frontendMentro-9/static/js/main.2d35868a.js.map"
   },
   "entrypoints": [
-    "static/css/main.56350f48.css",
+    "static/css/main.ead72ea4.css",
     "static/js/main.2d35868a.js"
   ]
 }
